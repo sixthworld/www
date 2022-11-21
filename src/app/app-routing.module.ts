@@ -11,6 +11,7 @@ import { PrivacyPolicyComponent } from './components/pages/privacy-policy/privac
 const routes: Routes = [
   { path: '', component: CompaniesComponent },
   { path: 'developers', component: DevelopersComponent },
+  { path: 'companies', redirectTo: 'hire-developers', pathMatch: 'full' },
   { path: 'hire-developers', component: CompaniesComponent },
   { path: 'developers/register', component: DevelopersRegisterComponent },
   { path: 'companies/register', component: CompaniesRegisterComponent },
