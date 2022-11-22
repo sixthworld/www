@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'hire-developers', component: CompaniesComponent },
   { path: 'developers/register', component: DevelopersRegisterComponent },
   { path: 'companies/register', component: CompaniesRegisterComponent },
-  { path: 'conatct', component: ContactComponent },
+  { path: 'contact', component: ContactComponent },
   { path: 'privacy-policy', component: PrivacyPolicyComponent },
 
   { path: '**', component: NotFoundComponent },
