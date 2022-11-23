@@ -1,0 +1,24 @@
+@import "/src/assets/scss/import";
+
+.footer {
+    width: 100%;
+    background: $dark;
+    padding: $base-size * 12 0;
+
+    h4 {
+        color: $white;
+    }
+
+    img {
+        background: $white;
+        margin: $base-size* 4 0;
+        border-radius: 4px;
+    }
+
+    ul {
+        li {
+            padding: $base-size * 3 0;
+            color: $white;
+        }
+    }
+}

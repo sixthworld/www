@@ -1,8 +1,8 @@
 // @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900');
-@import "./assets/scss/import.scss";
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
 @import "~bootstrap/dist/css/bootstrap.css";
-
+@import "./assets/scss/import.scss";
 /*-------------------------------------------------------------------------------------------
   CSS definations for 
 -------------------------------------------------------------------------------------------*/
@@ -195,6 +195,7 @@ table {
 }
 
 ul {
+	padding: 0 !important;
 	margin-bottom: 0;
 
 	li {
@@ -262,7 +263,7 @@ p {
 	font-weight: $font-weight-regular;
 	padding: $base-size * 2 $base-size * 7.5 $base-size * 2 $base-size * 7.5;
 	line-height: $base-size * 12;
-	@include border-radius($base-size * 4);
+	@include border-radius($base-size * 2);
 	@include box-shadow($base-size * 0, $base-size * 2, $base-size * 3, $shadow-color);
 }
 
