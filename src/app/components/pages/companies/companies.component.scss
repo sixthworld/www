@@ -1,0 +1,27 @@
+@import "/src/assets/scss/import";
+
+.companies{
+    
+    h1{
+      font-size: $base-size*25;
+      font-weight: 500;
+      line-height: normal;
+      margin-top: 25px;
+    }
+    h3{
+        margin-top: 50px;
+        color: $primary !important;
+        font-weight: 500;
+    }
+    h4{
+        margin-top: 25px;
+        font-size: $base-size*10 !important;
+    }
+    h5{
+        margin-top: 25px;
+        font-size: $base-size*8 !important;
+    }
+    button{
+        margin-top: 25px;
+    }
+}
