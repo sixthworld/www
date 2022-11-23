@@ -1,1 +1,326 @@
-/* You can add global styles to this file, and also import other style files */
+// @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900');
+@import "./assets/scss/import.scss";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@import "~bootstrap/dist/css/bootstrap.css";
+
+/*-------------------------------------------------------------------------------------------
+  CSS definations for 
+-------------------------------------------------------------------------------------------*/
+body {
+	background: $white;
+	font-family: 'Open Sans', sans-serif;
+	font-size: $base-size * 6;
+	color: $font-color;
+}
+
+/* RESET */
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*-------------------------------------------------------------------------------------------
+  CSS Padding & Margin 1 to 100px Top, Bottom, Left, Right 
+-------------------------------------------------------------------------------------------*/
+$spaceamounts: (
+	1,
+	2,
+	3,
+	4,
+	5,
+	6,
+	7,
+	8,
+	9,
+	10,
+	11,
+	12,
+	13,
+	14,
+	15,
+	16,
+	17,
+	18,
+	19,
+	20,
+	21,
+	22,
+	23,
+	24,
+	25,
+	26,
+	27,
+	28,
+	29,
+	30,
+	31,
+	32,
+	33,
+	34,
+	35,
+	36,
+	37,
+	38,
+	39,
+	40,
+	41,
+	42,
+	43,
+	44,
+	45,
+	46,
+	47,
+	48,
+	49,
+	50,
+	51,
+	52,
+	53,
+	54,
+	55,
+	56,
+	57,
+	58,
+	59,
+	60,
+	61,
+	62,
+	63,
+	64,
+	65,
+	66,
+	67,
+	68,
+	69,
+	70,
+	71,
+	72,
+	73,
+	74,
+	75,
+	76,
+	77,
+	78,
+	79,
+	80,
+	81,
+	82,
+	83,
+	84,
+	85,
+	86,
+	87,
+	88,
+	89,
+	90,
+	91,
+	92,
+	93,
+	94,
+	95,
+	96,
+	97,
+	98,
+	99,
+	100
+);
+$sides: (top, bottom, left, right); // Leave this variable alone
+
+@each $space in $spaceamounts {
+	@each $side in $sides {
+		.m-#{str-slice($side, 0, 1)}-#{$space} {
+			margin-#{$side}: #{$space}px !important;
+		}
+
+		.p-#{str-slice($side, 0, 1)}-#{$space} {
+			padding-#{$side}: #{$space}px !important;
+		}
+	}
+
+	.m-#{$space} {
+		margin: #{$space}px !important;
+	}
+
+	.p-#{$space} {
+		padding: #{$space}px !important;
+	}
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+
+	th {
+		font-weight: bold;
+		text-align: center;
+
+		&:first-child {
+			text-align: left;
+		}
+	}
+
+	td {
+		text-align: center;
+
+		&:first-child {
+			text-align: left;
+		}
+	}
+}
+
+/* Padding left & right None */
+.p-r-0 {
+	padding-right: 0 !important;
+}
+.p-l-0 {
+	padding-left: 0 !important;
+}
+.p-t-up-130 {
+	padding-top: 130px;
+}
+
+.m-r-0 {
+	margin-right: 0 !important;
+}
+.m-l-0 {
+	margin-left: 0 !important;
+}
+
+ul {
+	margin-bottom: 0;
+
+	li {
+		list-style: none;
+	}
+}
+
+button {
+	background: none;
+	cursor: pointer;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* Headding Tag
+/*-------------------------------------------------------------------------------------------*/
+
+h1 {
+	// (1.125rem = 18px)
+	font-size: $h1;
+	color: $black;
+	font-weight: $font-weight-semi-bold;
+	margin-bottom: 0 !important;
+}
+
+h2 {
+	// (0.875rem = 14px)
+	font-size: $h2 !important;
+	color: $h2;
+	margin-bottom: 0 !important;
+}
+
+h3 {
+	// (0.625rem = 10px)
+	font-size: $h3 !important;
+	color: $h3-color !important;
+	margin-bottom: 0 !important;
+}
+
+h4 {
+	// (1rem = 16px)
+	font-size: $h4 !important;
+	margin-bottom: 0 !important;
+	$font-weight-semi-bold:700;
+}
+
+h5 {
+	// (1rem = 16px)
+	margin-bottom: 0 !important;
+}
+
+h6 {
+	// (1rem = 16px)
+	margin-bottom: 0 !important;
+}
+
+p {
+	font-size: $base-size * 6;
+}
+
+/*Theme btn */
+.btn {
+	background: $primary;
+	font-size: $base-font-size;
+	color: $white;
+	font-weight: $font-weight-regular;
+	padding: $base-size * 2 $base-size * 7.5 $base-size * 2 $base-size * 7.5;
+	line-height: $base-size * 12;
+	@include border-radius($base-size * 4);
+	@include box-shadow($base-size * 0, $base-size * 2, $base-size * 3, $shadow-color);
+}
+
+.active {
+	background: $background-color !important;
+	color: $primary !important;
+}
+
+.border-line {
+	border: $base-size * 0.5 solid $background-color;
+	margin: $base-size * 7.5;
+}
+p {
+	margin-bottom: 0 !important;
+	font-size: $base-size * 6;
+}
+
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// Mat Propite
+.mat-form-field {
+	display: block !important;
+}
+
+// Flex class
+.flex-1 {
+	flex: 1;
+}
+.flex-2 {
+	flex: 2;
+}
+.flex-1 {
+	flex: 3;
+}
+.flex-1 {
+	flex: 4;
+}
+
+.mat-h2,
+.mat-title,
+.mat-typography h2 {
+	font: 12px;
+}
+.card-body {
+	min-height: $base-size * 87 !important;
+}
+
+#b-l-0 {
+	border-left: none;
+}
+
+#b-t-0 {
+	border-top: none;
+}
+#b-r-0 {
+	border-right: none;
+}
+#b-b-0 {
+	border-bottom: none;
+}

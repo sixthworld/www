@@ -12,6 +12,7 @@ import { FooterComponent } from './components/layouts/footer/footer.component';
 import { DevelopersRegisterComponent } from './components/pages/developers-register/developers-register.component';
 import { CompaniesRegisterComponent } from './components/pages/companies-register/companies-register.component';
 import { NotFoundComponent } from './components/pages/not-found/not-found.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { NotFoundComponent } from './components/pages/not-found/not-found.compon
     CompaniesRegisterComponent,
     NotFoundComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FlexLayoutModule],
   providers: [],
   bootstrap: [AppComponent],
 })
