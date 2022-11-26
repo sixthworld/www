@@ -12,19 +12,15 @@ import { FooterComponent } from './components/layouts/footer/footer.component';
 import { DevelopersRegisterComponent } from './components/pages/developers-register/developers-register.component';
 import { CompaniesRegisterComponent } from './components/pages/companies-register/companies-register.component';
 import { NotFoundComponent } from './components/pages/not-found/not-found.component';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatFormFieldModule } from "@angular/material/form-field";
-import {MatCheckboxModule} from '@angular/material/checkbox';
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
-import {MatSelectModule} from '@angular/material/select';
-import {MatInputModule} from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-
-
 
 @NgModule({
   declarations: [
@@ -52,7 +48,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatButtonModule,
     MatCheckboxModule,
     MatFormFieldModule,
-    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent],
